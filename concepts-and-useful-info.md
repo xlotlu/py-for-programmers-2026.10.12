@@ -7,6 +7,23 @@ Python este whitespace-sensitive
 
 în Python totul este o referință
 
+Python is self-documenting
+(scriem un string ca primul lucru în definiție)
+
+în Python fiecare operator este implementat
+drept o metodă pe obiect
+
+
+# You should read these:
+
+The Styleguide:
+https://peps.python.org/pep-0008/
+
+String formatting examples:
+https://docs.python.org/3/library/string.html#format-examples
+
+Date formatting (strptime, strftime):
+https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
 
 # Concepte:
 
@@ -14,6 +31,13 @@ reprezentare
 
 iterable: something that can be iterated (folosit în for)
 
+"duck typing": If it walks like a duck and quacks like a duck, it's good enough for me.
+
+iterator = un iterabil special, ce are cod în spate ce se execută
+           și își suspendă execuția după ce returnează fiecare element
+
+
+în Python excepțiile sunt folosite pentru flow control!
 
 # Basic data-types
 
@@ -24,6 +48,12 @@ str
 list   # mutable
 tuple  # immutable
 
+dict   # mutable
+
+set    # mutable
+frozenset # immutable
+
+
 ## sequences:
 
 list, tuple and str:
@@ -32,6 +62,8 @@ list, tuple and str:
 - they have a length -- suportă funcția len
 - suportă operatorul `in`
 - sunt accesibile după index
+- și slice-uibile
+- au metodele .count() și .index()
 
 
 # Operatori
@@ -48,6 +80,16 @@ de data type-ul pe care se aplică!
 %  restul împărțirii
 
 in # elem in collection
+
+
+# operatori in-place
+(de ținut minte, se pot comporta diferit dacă obiectul este mutable sau nu,
+adică pt. obiecte immutable creează un obiect nou, altfel îl modifică pe cel existent)
+
+-=
++=
+*=
+/=
 
 
 ## operatori boolean:
@@ -71,9 +113,15 @@ in
 # Debugging essentials
 
 print()
+help()
+type() # returnează clasa din care a fost instanțiat obiectul
+
+TODO: hands-on debugging
 
 
 # Important Exceptions:
+
+NameError   : simbolul nu este declarat
 
 TypeError   : la diverse operațiuni, când există data type mismatch
 ValueError  : valoare nepotrivită (for whatever that means, context-dependent)
@@ -83,6 +131,7 @@ IndexError  : când nu există indexul respectiv
 # Pachete utile:
 
 pip install ipython
+pip install rich
 
 
 # Working with VSCode
