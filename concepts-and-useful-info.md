@@ -126,6 +126,7 @@ NameError   : simbolul nu este declarat
 TypeError   : la diverse operațiuni, când există data type mismatch
 ValueError  : valoare nepotrivită (for whatever that means, context-dependent)
 IndexError  : când nu există indexul respectiv
+KeyError    : când nu există cheia respectivă
 
 
 # Pachete utile:
@@ -141,6 +142,38 @@ Ctrl+/       comment selection
 Shift+Enter  run selection
 Tab          indent selection
 Shift+Tab    unindent selection
+
+
+pentru a folosi ipython ca terminalul default de python,
+adăugați în settings.json
+
+Ctrl+Shift+p --> Open settings.json
+
+```
+    "python.terminal.launchArgs": [
+        "-m", "IPython", "--no-autoindent"
+    ],
+```
+
+sau, pentru a păstra autoindent,
+dar nu va mai merge Shift+Enter
+
+```
+    "python.terminal.launchArgs": [
+        "-m", "IPython"
+    ],
+```
+
+
+# Working with ipython
+
+useful stuff:
+
+dacă am instalat rich:
+
+```
+%load_ext rich
+```
 
 
 # Diverse
