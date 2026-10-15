@@ -121,6 +121,9 @@ TODO: hands-on debugging
 
 # Important Exceptions:
 
+SyntaxError : evident
+IndentationError: un caz particular de SyntaxError
+
 NameError   : simbolul nu este declarat
 
 TypeError   : la diverse operațiuni, când există data type mismatch
@@ -133,6 +136,7 @@ KeyError    : când nu există cheia respectivă
 
 pip install ipython
 pip install rich
+pip install requests
 
 
 # Working with VSCode
