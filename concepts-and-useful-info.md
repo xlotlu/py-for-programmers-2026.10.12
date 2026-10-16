@@ -25,6 +25,11 @@ https://docs.python.org/3/library/string.html#format-examples
 Date formatting (strptime, strftime):
 https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
 
+```
+import this
+```
+
+
 # Concepte:
 
 reprezentare
@@ -38,6 +43,7 @@ iterator = un iterabil special, ce are cod în spate ce se execută
 
 
 în Python excepțiile sunt folosite pentru flow control!
+
 
 # Basic data-types
 
@@ -115,6 +121,7 @@ in
 print()
 help()
 type() # returnează clasa din care a fost instanțiat obiectul
+dir()  # returnează o listă cu toate atributele obiectului
 
 TODO: hands-on debugging
 
@@ -137,6 +144,7 @@ KeyError    : când nu există cheia respectivă
 pip install ipython
 pip install rich
 pip install requests
+pip install ipdb
 
 
 # Working with VSCode
@@ -172,6 +180,11 @@ dar nu va mai merge Shift+Enter
 # Working with ipython
 
 useful stuff:
+
+```
+%load_ext autoreload
+%autoreload 2
+```
 
 dacă am instalat rich:
 

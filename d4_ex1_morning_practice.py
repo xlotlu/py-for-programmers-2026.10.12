@@ -172,11 +172,13 @@ def count_words(txt, insensitive=True):
 # 6. scrieți o funcție
 def grep(fname, match, insensitive=False):
     if insensitive:
-        match = match.lower()
+        #match = match.lower()
+        # preferat pentru comparațiile case-insensitive:
+        match = match.casefold()
 
     with open(fname) as f:
         for line in f:
-            if match in (line.lower() if insensitive else line):
+            if match in (line.casefold() if insensitive else line):
                 print(line.removesuffix("\n"))
 
 # ce printează toate liniile din `fname`
